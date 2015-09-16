@@ -1,0 +1,19 @@
+<div class="m-container">
+	<p class="slogan">点击图片解锁各种好友！</p>
+	<div class="slide">
+		<carousel class="myInterval">
+			<slide ng-repeat="friend in friends" active="friend.active">
+				<img ng-src="{{friend.image}}" ng-click="setBlock(friend.image)"/>
+				<div class="carousel-caption">
+					<p>{{friend.name}}</p>
+				</div>
+			</slide>
+		</carousel>
+	</div>
+	<div class="friendInfo" ng-repeat="friend in friends" ng-class="{active:imgClicked==friend.image}">
+		<p>name:{{friend.name}}</p>
+		<p>birthday:{{friend.birthday}}</p>
+		<p>hobby:{{friend.hobby}}</p>
+		<p>creed:{{friend.creed}}</p>
+	</div>
+</div>

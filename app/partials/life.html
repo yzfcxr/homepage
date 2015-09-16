@@ -1,0 +1,9 @@
+<ul class="waterfall-list" ng-waterfall cols="5" col-margin="10">
+	<li ng-repeat="life in lifes" repeat-finished>
+		<div class="data-block">
+			<img src="{{life.image}}">
+		</div>
+	</li>
+	<a class="turnToNextPage"  ng-infinite-scroll href="#/friends">下一页</a>
+</ul>
+
